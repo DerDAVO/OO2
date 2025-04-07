@@ -1,0 +1,21 @@
+@startuml
+Interface Tweet{
+}
+ReTweet -->"0..*"Tweet: -retweets
+class TweetOriginal{
+-texto:String
+}
+TweetOriginal --|> Tweet
+class ReTweet{
+}
+ReTweet --|> Tweet
+class Usuario{
+-screenName:String
+}
+Usuario --> "0..*"Tweet: -tweets
+class Twitter{
++verificarUsuarioExistente():boolean
++crearUsuario()
+}
+Twitter -->"0..*"Usuario : -usuarios
+@enduml
