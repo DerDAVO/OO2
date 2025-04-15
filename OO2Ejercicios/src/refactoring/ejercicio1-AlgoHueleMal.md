@@ -52,3 +52,11 @@ Analice el codigo que se muestra a continuacion. Indique que *code smells* encue
         System.out.println(message);
     }
 ```
+### Resolucion usando refactoring
++ *Code Smells* encontrados:
+    + EL metodo `imprimirValores()` realiza dos tareas distintas, aunque se cumple con la descripcion y objetivo de la firma del metodo no es extensible ya que si se quisiera solo imprimir el promedio de salario o solo el promedio de edades esto no seria lo correcto
+    + Ademas la variable personal no se encuentra en el metodo.
++ Sugerencias de correcciones:
+    + Separar los metodos con una tarea en especifico
+    + Renombrar el metodo con una descripcion clara 
+        Ejemplo: `imprimirPromedioDeEdad()` y `imprimirSalarioPromedio()`
