@@ -3,7 +3,7 @@ Para cada una de las siguientes situaciones, realice en forma iterativa los sigu
 1. Indique mal olor
 2. Indique el refactoring que lo corrige
 3. Aplique el refactoring, mostrando el resultado final(codigo y/o diseño segun corresponda).
-> [!WARNING]
+> [!NOTE]
 > Si vuelve a encontrar un mal olor vuelva al paso 1.
 ## 2.1 Empleados 
 ``` java
@@ -49,3 +49,7 @@ Para cada una de las siguientes situaciones, realice en forma iterativa los sigu
         El metodo `sueldo()` y las variables de instancia `nombre`,`apellido` y `sueldoBasico` se encuentran repetidos en todas las clases por lo que se recomienda hace un **Extract Class** de forma que todas las similitudes queden en una solo clase y ahora estas clases pasaran a ser subclases de la nueva **Superclase**, ademas aplicamos el refactoring **Pull up Method y Pull Field**
     + violacion de encapsulacion
         Las variables de instancias pasadas a la SuperClase deben ser midificadas como privadas para que no se viole la encapsulacion, almodificarlas a estado `private` las subclases no podran acceder a ella por lo cual se las debe modificar a `protected`, esto se logra aplicando el refactoring **Encapsulate field**
+### Resolucion en codigo
+``` java
+    public  
+```
